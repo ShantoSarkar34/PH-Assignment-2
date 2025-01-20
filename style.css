@@ -1,9 +1,136 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.quicksand-font {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
 }
 
-h1{
-    color: red;
+.raleway-normal {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+}
+
+/* google fonts end  */
+
+:root {
+  --primary-color: #fea301;
+  --secondary-color: #01acfd;
+  --third-color: #95b226;
+  --text-color: #808080;
+}
+
+/* all colors end */
+
+/* main design start  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  padding: 20px 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.logo_text {
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--primary-color);
+  font-weight: 700;
+  transition: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+.menu ul li a:hover {
+  color: var(--text-color);
+}
+
+.menu ul li .menu_1 {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+.menu ul li .menu_2 {
+  color: #05d4df;
+  font-weight: 500;
+}
+.menu ul li .menu_3 {
+  color: #5d58ef;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 197px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  background-color: white;
+}
+
+.nav_icon {
+  display: none;
+}
+
+/* responsive for mobile start  */
+
+@media screen and (max-width: 768px) {
+  .menu,
+  .nav_btn {
+    display: none;
+  }
+
+  .nav_icon {
+    display: block;
+  }
+
+  .nav .logo .logo_text {
+    display: none;
+  }
 }
