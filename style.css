@@ -121,20 +121,75 @@
 
 /* banner section start  */
 
-.banner_main{
- 
+.banner_main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner_content .banner_heading {
+  font-size: 56px;
+  line-height: 61px;
+  font-weight: 700;
+  color: black;
+  width: 650px;
+}
+
+.banner_heading .banner_heading_2 {
+  color: var(--secondary-color);
+}
+
+.banner_content .banner_pera {
+  font-size: 20px;
+  line-height: auto;
+  font-weight: 400;
+  margin: 24px 0;
+  width: 650px;
+}
+
+.banner_btn {
+  background-color: black;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: white;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 197px;
+  height: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner_btn:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  background-color: white;
+}
+
+/* .banner_img{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+} */
+
+.banner_img img {
+  width: 400px;
+  height: 515px;
 }
 
 /* responsive for mobile start  */
 
 @media screen and (max-width: 768px) {
-
-  .container{
+  .container {
     width: 100%;
     margin: 0;
   }
 
-  .nav{
+  /* header section start  */
+
+  .nav {
     border: 1px solid var(--primary-color);
     padding: 20px 1rem;
   }
@@ -151,5 +206,11 @@
 
   .nav .logo .logo_text {
     display: none;
+  }
+
+  /* banner section start  */
+
+  .banner_main {
+    padding: 0 1rem;
   }
 }
