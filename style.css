@@ -554,9 +554,9 @@ footer {
 
   /*============ header section start =============*/
 
-  .nav {
+  .header_main {
     border: 1px solid var(--primary-color);
-    padding: 20px 1rem;
+    padding: 0 1rem;
   }
 
   .menu,
@@ -763,7 +763,26 @@ footer {
 
 /*======================= responsive for medium device ========= */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  /* header section start  */
+  .header_main {
+    border: 1px solid var(--primary-color);
+    padding: 0 1rem;
+  }
+  .menu,
+  .nav_btn {
+    display: none;
+  }
+
+  .nav_icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav .logo .logo_text {
+    display: none;
+  }
+
   /* banner section start  */
   .banner_main {
     margin: 20px 0;
@@ -824,7 +843,7 @@ footer {
   /* stories section start  */
   .stories_cards {
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 7px;
     margin: 40px 0;
   }
 
@@ -838,5 +857,59 @@ footer {
 
   .card_small {
     display: block;
+  }
+  .storie_card img {
+    width: 163px;
+    height: 105px;
+  }
+
+  .storie_text {
+    padding-left: 22px;
+    font-size: 15px;
+  }
+
+  .storie_date {
+    display: flex;
+    margin-top: -18px;
+  }
+
+  .card_style {
+    grid-row: 0;
+  }
+
+  .card_first {
+    display: none;
+  }
+
+  .storie_date .date_3 {
+    background-color: #5d58f0;
+    border-radius: 43.93px;
+    padding: 6px 11px;
+    font-size: 9px;
+    line-height: 17px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .storie_date .date_2 {
+    background-color: #95b226;
+    border-radius: 43.93px;
+    padding: 6px 11px;
+    font-size: 9px;
+    line-height: 17px;
+    font-weight: 500;
+    color: white;
+  }
+
+  .storie_text .storie_pera {
+    font-size: 10px;
+    line-height: 18.8px;
+    font-weight: 700;
+    margin: 13px 0;
+  }
+  /* footer section start  */
+  .footer_main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
