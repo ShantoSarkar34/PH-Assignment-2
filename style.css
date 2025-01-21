@@ -843,7 +843,7 @@ footer {
   /* stories section start  */
   .stories_cards {
     grid-template-columns: repeat(3, 1fr);
-    gap: 7px;
+    gap: 14px;
     margin: 40px 0;
   }
 
@@ -911,5 +911,9 @@ footer {
   .footer_main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer_nav_title_2{
+    margin-top: 30px;
   }
 }
