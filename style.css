@@ -325,6 +325,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .next_button .next_btn_main .next_btn {
@@ -332,6 +333,14 @@ body {
   border: none;
   color: white;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.next_btn_main:hover {
+  background-color: var(--secondary-color);
+}
+
+.next_btn_main:hover .next_btn {
+  background-color: var(--secondary-color);
 }
 
 /* stories section start  */
@@ -350,6 +359,11 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 19px;
+}
+
+.card_first img {
+  width: 440px;
+  height: 300px;
 }
 
 .card_style {
@@ -532,7 +546,7 @@ footer {
 
 /*======================= responsive for mobile start ========= */
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 576px) {
   .container {
     width: 100%;
     margin: 0 auto;
@@ -644,8 +658,12 @@ footer {
 
   .stories_cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 11px;
+    gap: 14px;
     margin: 40px 0;
+  }
+
+  .card_style {
+    order: 999;
   }
 
   .card_first {
@@ -740,5 +758,85 @@ footer {
   .footer_nav,
   .footer_social {
     margin-top: 32px;
+  }
+}
+
+/*======================= responsive for medium device ========= */
+
+@media screen and (min-width: 768px) {
+  /* banner section start  */
+  .banner_main {
+    margin: 20px 0;
+    padding: 0 1rem;
+    flex-direction: column-reverse;
+    row-gap: 20px;
+    justify-content: center;
+  }
+
+  .banner_main .banner_main_content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .banner_content .banner_heading {
+    font-size: 56px;
+    line-height: 61px;
+    font-weight: 700;
+    color: black;
+    width: 650px;
+    text-align: center;
+  }
+
+  .banner_heading .banner_heading_2 {
+    color: var(--primary-color);
+  }
+
+  .banner_content .banner_pera {
+    font-size: 14px;
+    margin: 24px 0;
+    text-align: center;
+  }
+
+  .banner_btn_main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner_img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner_img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* card section start  */
+
+  .card_items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+
+  /* stories section start  */
+  .stories_cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 40px 0;
+  }
+
+  .card_style {
+    order: 999;
+  }
+
+  .card_first {
+    display: none;
+  }
+
+  .card_small {
+    display: block;
   }
 }
