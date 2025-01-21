@@ -209,7 +209,6 @@ body {
 }
 
 .card_1 {
-  background: linear-gradient(to bottom, #def5ff, white);
   width: 355px;
   border: 1px solid #def5ff;
   border-radius: 18.86px;
@@ -217,7 +216,6 @@ body {
   justify-content: center;
 }
 .card_2 {
-  background: linear-gradient(to bottom, #fff4dc, white);
   width: 355px;
   border: 1px solid #fff4dc;
   border-radius: 18.86px;
@@ -225,7 +223,6 @@ body {
   justify-content: center;
 }
 .card_3 {
-  background: linear-gradient(to bottom, #f2e8ff, white);
   width: 355px;
   border: 1px solid #f2e8ff;
   border-radius: 18.86px;
@@ -233,14 +230,35 @@ body {
   justify-content: center;
 }
 
-.card_img_and_text {
-  padding: 52px 115px 0;
-}
-
-.card_img_and_text .card_img {
+.card_1 .card_img_and_text .card_img {
+  background: linear-gradient(to bottom, #def5ff, white);
+  width: 355px;
   display: flex;
   justify-content: center;
   margin-bottom: 32.7px;
+  padding: 52px 115px 0;
+  border-top-left-radius: 18.86px;
+  border-top-right-radius: 18.86px;
+}
+.card_2 .card_img_and_text .card_img {
+  background: linear-gradient(to bottom, #fff4dc, white);
+  width: 355px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32.7px;
+  padding: 52px 115px 0;
+  border-top-left-radius: 18.86px;
+  border-top-right-radius: 18.86px;
+}
+.card_3 .card_img_and_text .card_img {
+  background: linear-gradient(to bottom, #f2e8ff, white);
+  width: 355px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32.7px;
+  padding: 52px 115px 0;
+  border-top-left-radius: 18.86px;
+  border-top-right-radius: 18.86px;
 }
 
 .card_subtitle {
@@ -258,7 +276,6 @@ body {
   color: var(--text-color);
   text-align: center;
   margin: 33px 0;
-  width: 286px;
 }
 
 .card_button {
@@ -272,7 +289,7 @@ body {
   font-size: 15.9px;
   line-height: 28.3px;
   color: var(--secondary-color);
-  background-color: white;
+  background-color: #f7f7f7;
   cursor: pointer;
 }
 .card_button .card_btn_2 {
@@ -280,7 +297,7 @@ body {
   font-size: 15.9px;
   line-height: 28.3px;
   color: var(--primary-color);
-  background-color: white;
+  background-color: #f7f7f7;
   cursor: pointer;
 }
 .card_button .card_btn_3 {
@@ -288,16 +305,41 @@ body {
   font-size: 15.9px;
   line-height: 28.3px;
   color: #8700ff;
-  background-color: white;
+  background-color: #f7f7f7;
   cursor: pointer;
+}
+
+.next_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  column-gap: 10px;
+}
+
+.next_button .next_btn_main {
+  background-color: var(--primary-color);
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.next_button .next_btn_main .next_btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
 }
 
 /*======================= responsive for mobile start ========= */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 896px) {
   .container {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
   }
 
   /*============ header section start =============*/
@@ -388,9 +430,8 @@ body {
     row-gap: 28px;
   }
 
-  .card_items .card_1,
-  .card_2,
-  .card_3 {
-    width: 100%;
+  .card_content .next_button {
+    display: none;
+    margin-top: 0;
   }
 }
