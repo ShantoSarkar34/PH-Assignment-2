@@ -127,23 +127,13 @@ body {
 
 /* banner marquee section start  */
 
-.marquee-container {
+marquee {
   background-color: white;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 14px 0;
-  font-family: Arial, sans-serif;
-}
-
-.marquee-text {
-  display: inline-block;
-  padding-left: 100%;
   color: #01acfd;
-  font-size: 18px;
   font-family: "Quicksand", serif;
   font-optical-sizing: auto;
-  animation: scroll-left 40s linear infinite;
+  font-size: 18px;
+  padding: 14px;
 }
 
 .marque-text-2 {
@@ -157,15 +147,6 @@ body {
 }
 .marque-text-5 {
   color: #5d58ef;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 .banner_main {
